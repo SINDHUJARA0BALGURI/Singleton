@@ -13,7 +13,7 @@ public class GamePrefabEnvironment : MonoBehaviour
         {
             for(int x = 0; x < depth; x++)
             {
-                Vector3 pos = new Vector3(i, 0, x);
+                Vector3 pos = new Vector3(i, Mathf.PerlinNoise(i*0.2f,x*0.2f)*3, x);
                 Instantiate(cube, pos, Quaternion.identity);
             }
         }
